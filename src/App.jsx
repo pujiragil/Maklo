@@ -1,6 +1,8 @@
+import { Router } from "./config"
+
 const App = () => {
   return (
-    <div>App</div>
+    <Router/>
   )
 }
 
