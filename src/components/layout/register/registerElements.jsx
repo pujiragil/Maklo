@@ -8,9 +8,13 @@ export const RegisterWrapper = styled.div`
   align-items: center;
   width: 100%;
   height: 100%;
+  border-radius: 20px;
+  box-shadow: 0 10px 15px #0000004a;
+  background: ${({ dark }) => dark === 'dark' ? '#1E1C30' : '#FFF'};
 `
 
 export const RegisterFieldWrapper = styled.div`
+  height: 100%;
   padding: 40px 80px;
   display: flex;
   flex-direction: column;
@@ -38,7 +42,7 @@ export const RegisterFormTitle = styled.div`
 `
 
 export const RegisterForm = styled.form`
-  width: 65%;
+  width: 70%;
   display: flex;
   flex-direction: column;
   row-gap: 1rem;  
@@ -48,5 +52,5 @@ export const RegisterImageWrapper = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 600px;
+  height: 100%;
 `

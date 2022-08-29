@@ -1,4 +1,5 @@
 import styled from "styled-components"
+import { useThemeContext } from "../../../context/theme-context"
 
 const FieldWrapper = styled.div`
   display: flex;
@@ -9,7 +10,7 @@ const FieldWrapper = styled.div`
 const Label = styled.label`
   font-size: 14px;
   font-weight: 500;
-  color: #1B212D;
+  color: ${({ dark }) => dark === 'dark' ? '#FFF' : '#1B212D'};
 `
 
 const Input = styled.input`
@@ -17,22 +18,24 @@ const Input = styled.input`
   color: #78778B;
   border-radius: 10px;
   outline: none;
-  border: 1px solid #F2F2F2;
+  border: 1px solid ${({ dark }) => dark === 'dark' ? '#282541' : '#F2F2F2'};
   transition: all .2s ease-in-out;
+  background: transparent;
 
   :focus {
-    border: 1px solid #1B212D;
-    color: #1B212D;
-  transition: all .2s ease-in-out;
+    border: 1px solid ${({ dark }) => dark === 'dark' ? '#F2F2F2' : '#1B212D'};
+    color: ${({ dark }) => dark === 'dark' ? '#FFF' : '#1B212D'};
+    transition: all .2s ease-in-out;
   }
 `
 
 
-const Field = ({label, placeholder}) => {
+const Field = ({label, type, placeholder}) => {
+  const context = useThemeContext()
   return (
     <FieldWrapper>
-      <Label>{label}</Label>
-      <Input placeholder={placeholder}/>
+      <Label dark={context.theme}>{label}</Label>
+      <Input dark={context.theme} type={type} required placeholder={placeholder}/>
     </FieldWrapper>
   )
 }

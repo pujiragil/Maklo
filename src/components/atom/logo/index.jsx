@@ -1,5 +1,6 @@
-import { darkLogo } from '../../../assets'
+import { darkLogo, lightLogo } from '../../../assets'
 import styled from 'styled-components'
+import { useThemeContext } from '../../../context/theme-context'
 
 const LogoWrapper = styled.div`
   display: flex;
@@ -17,14 +18,15 @@ const LogoTitle = styled.h2`
   font-weight: 600;
   font-size: 18px;
   font-family: 'Poppins', sans-serif;
-  color: #1B212D;
+  color: ${({ dark }) => dark === 'dark' ? '#FFF' : '#1B212D'};
 `
 
 const Logo = () => {
+  const context = useThemeContext()
   return (
     <LogoWrapper>
-      <LogoImage src={darkLogo}/>
-      <LogoTitle>Maklo.</LogoTitle>
+      <LogoImage src={context.theme === 'dark' ? lightLogo : darkLogo}/>
+      <LogoTitle dark={context.theme}>Maklo.</LogoTitle>
     </LogoWrapper>
   )
 }

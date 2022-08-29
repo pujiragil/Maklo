@@ -25,8 +25,8 @@ export const GoogleButton = styled.button`
   padding: 14px 0;
   border: none;
   outline: none;
-  background: #fff;
-  border: 1px solid #F5F5F5;
+  background: transparent;
+  border: 1px solid ${({ dark }) => dark === 'dark' ? '#282541' : '#F5F5F5'};
   border-radius: 10px;
   color: #78778B;
   font-size: 1rem;

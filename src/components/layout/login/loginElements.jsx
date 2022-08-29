@@ -8,9 +8,13 @@ export const LoginWrapper = styled.div`
   align-items: center;
   height: 100%;
   width: 100%;
+  border-radius: 20px;
+  box-shadow: 0 10px 15px #0000004a;
+  background: ${({ dark }) => dark === 'dark' ? '#1C1A2E' : '#FFF'};
 `
 
 export const LoginFieldWrapper = styled.div`
+  height: 100%;
   padding: 40px 80px;
   display: flex;
   flex-direction: column;
@@ -38,7 +42,7 @@ export const LoginFormTitle = styled.div`
 `
 
 export const LoginForm = styled.form`
-  width: 65%;
+  width: 70%;
   display: flex;
   flex-direction: column;
   row-gap: 1rem;
@@ -48,5 +52,5 @@ export const LoginImageWrapper = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 600px;
+  height: auto;
 `

@@ -3,7 +3,7 @@ import styled from "styled-components"
 export const Title = styled.h1`
   font-size: 30px;
   font-weight: 600;
-  color: #1B212D;
+  color: ${({ dark }) => dark === 'dark' ? '#FFF' : '#1B212D'};
 `
 
 export const Desc = styled.p`

@@ -1,9 +1,12 @@
 import LoginLayout from "../../components/layout/login"
+import { ThemeProvider } from "../../context/theme-context"
 
 const Login = () => {
   return (
     <div className="container">
-      <LoginLayout/>
+      <ThemeProvider>
+        <LoginLayout />
+      </ThemeProvider>
     </div>
   )
 }

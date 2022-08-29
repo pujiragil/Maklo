@@ -33,19 +33,19 @@ const Checkbox = styled.input`
 // `
 
 const Label = styled.label`
-  color: #1B212D;
+  color: ${({ dark }) => dark === 'dark' ? '#FFF' : '#1B212D'};
   font-size: 14px;
   font-weight: 500;
 `
 
-const Forgot = () => {
+const Forgot = ({dark}) => {
   return (
     <ForgotField>
       <CheckboxField>
         <Checkbox type="checkbox"/>
-        <Label>Remember for 30 Days</Label>
+        <Label dark={dark}>Remember for 30 Days</Label>
       </CheckboxField>
-      <Label>Forgot password</Label>
+      <Label dark={dark}>Forgot password</Label>
     </ForgotField>
   )
 }
@@ -59,8 +59,9 @@ export const Alert = styled.p`
 `
 
 export const Link = styled(LinkR)`
-  color: #1B212D;
+  color: ${({ dark }) => dark === 'dark' ? '#FFF' : '#1B212D'};
   text-decoration: none;
+  font-weight: 500;
 `
 
 
