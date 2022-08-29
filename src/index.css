@@ -14,7 +14,17 @@
   align-items: center;
 }
 
+.main--container {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+}
+
 .dark {
   background: rgba(30, 28, 48, 0.9);
   color: #FFF;
+}
+
+.nav-icon {
+  filter: invert(10%) sepia(35%) saturate(555%) hue-rotate(181deg) brightness(93%) contrast(93%);
 }

@@ -2,4 +2,19 @@ import darkLogo from './dark-logo.svg'
 import lightLogo from './light-logo.svg'
 import google from './google.svg'
 
-export {darkLogo, lightLogo, google}
+import dashboardActive from './dashboard-active.svg'
+import dashboard from './dashboard.svg'
+import transactionActive from './transaction-active.svg'
+import transaction from './transaction.svg'
+import invoiceActive from './invoices-active.svg'
+import invoice from './invoices.svg'
+import walletActive from './wallets-active.svg'
+import wallet from './wallets.svg'
+import settingActive from './settings-active.svg'
+import setting from './settings.svg'
+import helpActive from './help-active.svg'
+import help from './help.svg'
+import logoutActive from './logout-active.svg'
+import logout from './logout.svg' 
+
+export {darkLogo, lightLogo, google, dashboardActive, dashboard, transactionActive, transaction, invoiceActive, invoice, walletActive, wallet, settingActive, setting, helpActive, help, logoutActive, logout}
