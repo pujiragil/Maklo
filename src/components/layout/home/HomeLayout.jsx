@@ -7,15 +7,16 @@ export const HomeContainer = styled.div`
 
 export const HomeTitleField = styled.div`
   display: grid;
-  grid-template-columns: 1fr auto;
+  grid-template-columns: 3fr 1fr;
   grid-template-rows: 1fr;
-  justify-content: center;
-  align-items: center;
+  /* justify-content: center; */
+  /* align-items: center; */
 `
 
 export const HomeMainWrapper = styled.div`
   margin-top: 30px;
   display: grid;
-  grid-template-columns: 1fr auto;
+  grid-template-columns: 3fr 1fr;
   grid-template-rows: 1fr;
+  align-items: flex-start;
 `

@@ -49,12 +49,13 @@ const AmountTotal = styled.p`
 `
 const AmountWrapper = styled.div`
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
   column-gap: 25px;
+  margin-right: 40px;
 `
 
-const Amount = ({ primary }) => {
+const Amount = ({ primary, total }) => {
   return (
     <AmountItem primary={primary}>
       <AmountIconWrapper primary={primary}>
@@ -62,7 +63,7 @@ const Amount = ({ primary }) => {
       </AmountIconWrapper>
       <AmountField>
         <AmountTitle>Total spending</AmountTitle>
-        <AmountTotal primary={primary}>$250.80</AmountTotal>
+        <AmountTotal primary={primary}>{total}</AmountTotal>
       </AmountField>
     </AmountItem>
   )

@@ -5,11 +5,10 @@ import { IoMdArrowDropdown } from "react-icons/io"
 import { profile } from "../../../assets"
 
 const ProfileWrapper = styled.div`
-  width: 290px;
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
   align-items: center;
-  column-gap: 45px;
+  /* column-gap: 35px; */
   color: #929EAE;
 `
 
@@ -43,14 +42,15 @@ const ProfileNotificationIcon = styled(BsBellFill)`
 
 const ProfileField = styled.div`
   display: flex;
-  column-gap: 28px;
+  column-gap: 8px;
   justify-content: center;
   align-items: center;
+  /* padding: 0 10px; */
 `
 
 const ProfileItem = styled.div`
   display: flex;
-  column-gap: 12px;
+  column-gap: 8px;
   justify-content: center;
   align-items: center;
 `
