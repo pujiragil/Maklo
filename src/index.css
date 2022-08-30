@@ -16,8 +16,10 @@
 
 .main--container {
   display: flex;
+  margin: 0 auto;
   height: 100vh;
   width: 100vw;
+  max-width: 1400px;
 }
 
 .dark {
@@ -25,6 +27,7 @@
   color: #FFF;
 }
 
-.nav-icon {
-  filter: invert(10%) sepia(35%) saturate(555%) hue-rotate(181deg) brightness(93%) contrast(93%);
+.nav--logo {
+  width: 20px;
+  height: 20px;
 }

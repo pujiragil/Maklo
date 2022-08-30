@@ -1,42 +1,40 @@
-import { dashboard, dashboardActive, invoice, invoiceActive, setting, settingActive, transaction, transactionActive, wallet, walletActive } from "../assets";
+// import { dashboard, dashboardActive, invoice, invoiceActive, setting, settingActive, transaction, transactionActive, wallet, walletActive } from "../assets";
+import {RiHome5Fill, RiBarChartBoxFill, RiSettings4Fill } from 'react-icons/ri'
+import {BsBookmarkDashFill} from 'react-icons/bs'
+import {IoIosWallet} from 'react-icons/io'
 
-export const navbarData = [
+export const NavbarData = [
   {
     id: 1,
-    logoActive: dashboardActive,
-    logo: dashboard,
+    Logo: RiHome5Fill,
     alt: 'dashboard',
     to: '/',
     link: 'Dashboard'
   },
   {
     id: 2,
-    logoActive: transactionActive,
-    logo: transaction,
+    Logo: RiBarChartBoxFill,
     alt: 'transaction',
     to: '/transaction',
     link: 'Transactions'
   },
   {
     id: 3,
-    logoActive: invoiceActive,
-    logo: invoice,
+    Logo: BsBookmarkDashFill,
     alt: 'invoice',
     to: '/invoice',
     link: 'Invoices'
   },
   {
     id: 4,
-    logoActive: walletActive,
-    logo: wallet,
+    Logo: IoIosWallet,
     alt: 'wallet',
     to: '/wallet',
     link: 'My Wallets'
   },
   {
     id: 5,
-    logoActive: settingActive,
-    logo: setting,
+    Logo: RiSettings4Fill,
     alt: 'setting',
     to: '/setting',
     link: 'Settings'
