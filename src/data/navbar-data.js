@@ -1,4 +1,3 @@
-// import { dashboard, dashboardActive, invoice, invoiceActive, setting, settingActive, transaction, transactionActive, wallet, walletActive } from "../assets";
 import {RiHome5Fill, RiBarChartBoxFill, RiSettings4Fill } from 'react-icons/ri'
 import {BsBookmarkDashFill} from 'react-icons/bs'
 import {IoIosWallet} from 'react-icons/io'
@@ -15,7 +14,7 @@ export const NavbarData = [
     id: 2,
     Logo: RiBarChartBoxFill,
     alt: 'transaction',
-    to: '/transaction',
+    to: '/transactions',
     link: 'Transactions'
   },
   {

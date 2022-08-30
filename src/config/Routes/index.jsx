@@ -1,6 +1,6 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom"
 import Navbar from "../../components/layout/navbar"
-import { Register, Login, Home } from "../../pages"
+import { Register, Login, Home, Transaction } from "../../pages"
 
 const Router = () => {
   return (
@@ -8,7 +8,7 @@ const Router = () => {
       <Routes>
         <Route path="/" element={<Navbar/>}>
           <Route index element={<Home/>}/>
-          <Route path="setting" element={<Home/>}/>
+          <Route path="transactions" element={<Transaction/>}/>
         </Route>
         <Route path="/register" element={<Register/>} />
         <Route path="/login" element={<Login/>} />

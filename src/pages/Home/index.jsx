@@ -1,8 +1,11 @@
+import HomeLayout from "../../components/layout/home"
+import { ThemeProvider } from "../../context/theme-context"
+
 const Home = () => {
   return (
-    <div>
-      <h1>Halo bang</h1>
-    </div>
+    <ThemeProvider>
+      <HomeLayout/>
+    </ThemeProvider>
   )
 }
 

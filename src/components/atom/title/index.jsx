@@ -1,5 +1,12 @@
 import styled from "styled-components"
 
+export const MainTitle = styled.h1`
+  font-size: 25px;
+  font-weight: 600;
+  color: #1B212D;
+  flex: 3;
+`
+
 export const Title = styled.h1`
   font-size: 30px;
   font-weight: 600;
