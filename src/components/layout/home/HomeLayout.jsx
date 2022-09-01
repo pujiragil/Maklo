@@ -18,3 +18,8 @@ export const HomeMainWrapper = styled.div`
   grid-template-rows: 1fr;
   align-items: flex-start;
 `
+
+export const HomeContent = styled.div`
+  display: flex;
+  flex-direction: column;
+`

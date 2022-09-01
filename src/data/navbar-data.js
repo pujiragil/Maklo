@@ -21,7 +21,7 @@ export const NavbarData = [
     id: 3,
     Logo: BsBookmarkDashFill,
     alt: 'invoice',
-    to: '/invoice',
+    to: '/chart',
     link: 'Invoices'
   },
   {

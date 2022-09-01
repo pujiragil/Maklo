@@ -31,3 +31,9 @@
   width: 20px;
   height: 20px;
 }
+
+.recharts-tooltip-wrapper {
+  pointer-events: none;
+  border: none;
+  outline: none;
+}
