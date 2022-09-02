@@ -15,7 +15,6 @@ const ThemeProvider = ({ children }) => {
 
     return () => {
       handleTheme()
-      console.log('aku di delete mama')
     }
 
   }, [theme])
