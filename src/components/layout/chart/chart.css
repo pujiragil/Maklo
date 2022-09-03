@@ -26,7 +26,10 @@
 
 .chart--wrapper {
   margin-right: 40px;
+  padding: 25px;
   display: flex;
+  row-gap: 0;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }

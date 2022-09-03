@@ -55,14 +55,14 @@ const AmountWrapper = styled.div`
   margin-right: 40px;
 `
 
-const Amount = ({ primary, total }) => {
+const Amount = ({ primary, title, total }) => {
   return (
     <AmountItem primary={primary}>
       <AmountIconWrapper primary={primary}>
         <AmountIcon primary={primary}/>
       </AmountIconWrapper>
       <AmountField>
-        <AmountTitle>Total spending</AmountTitle>
+        <AmountTitle>{title}</AmountTitle>
         <AmountTotal primary={primary}>{total}</AmountTotal>
       </AmountField>
     </AmountItem>

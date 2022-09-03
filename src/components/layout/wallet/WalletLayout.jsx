@@ -40,8 +40,9 @@ export const WalletSubTitle = styled.p`
   justify-content: center;
   align-items: center;
   font-size: 14px;
-  font-weight: 600;
+  font-weight: 400;
   color: #29A073;
+  column-gap: 6px;
 `
 
 export const Dot = styled(BsThreeDots)`

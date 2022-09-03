@@ -1,0 +1,1 @@
+export const tableHeader = ['name/business', 'type', 'amount', 'date', 'invoice id', 'action']
