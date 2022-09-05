@@ -17,13 +17,13 @@
 .main--container {
   display: flex;
   margin: 0 auto;
-  height: 100vh;
+  height: fit-content;
   width: 100vw;
   max-width: 1400px;
 }
 
-.dark {
-  background: rgba(30, 28, 48, 0.9);
+.dark-theme {
+  background: #1C1A2E;
   color: #FFF;
 }
 

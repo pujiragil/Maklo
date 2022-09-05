@@ -4,6 +4,7 @@ import { Chart as ChartJS, CategoryScale, LinearScale, PointElement, LineElement
 import { chartData } from "../../../data/chart-data"
 import { RiArrowDropDownLine } from 'react-icons/ri'
 import styled from "styled-components"
+import { useThemeContext } from "../../../context/theme-context"
 
 ChartJS.register(
   CategoryScale,
@@ -152,7 +153,7 @@ const Legend = styled.div`
   column-gap: 10px;
   font-size: 12px;
   font-weight: 400;
-  color: #1B212D;
+  color: ${({ theme }) => theme === "light" ? "#1B212D" : "#FFF"};
 `
 
 const Rounded = styled.span`
@@ -163,7 +164,7 @@ const Rounded = styled.span`
 `
 
 const FilterLabel = styled.div`
-  background: #F8F8F8;
+  background: ${({ theme }) => theme === "light" ? "#F8F8F8" : "#282541"};
   cursor: pointer;
   padding: 8px 10px;
   border-radius: 5px;
@@ -175,21 +176,22 @@ const FilterLabel = styled.div`
 const Label = styled.p`
   font-size: 12px;
   font-weight: 400;
-  color: #1B212D;
+  color: ${({ theme }) => theme === "light" ? "#1B212D" : "#FFF"};
 `
 
 export default function ChartLayout() {
+  const {theme} = useThemeContext()
   return (
-    <div className="chart--wrapper">
+    <div className={`chart--wrapper ${theme}`}>
       <ChartTitleWrapper>
         <ChartTitle>Working Capital</ChartTitle>
         <LegendContent>
           <LegendWrapper>
-            <Legend><Rounded background="#29A073" />Income</Legend>
-            <Legend><Rounded background="#C8EE44" />Expenses</Legend>
+            <Legend theme={theme}><Rounded background="#29A073" />Income</Legend>
+            <Legend theme={theme}><Rounded background="#C8EE44" />Expenses</Legend>
           </LegendWrapper>
-          <FilterLabel>
-            <Label>Last 7 days</Label>
+          <FilterLabel theme={theme}>
+            <Label theme={theme}>Last 7 days</Label>
             <RiArrowDropDownLine/>
           </FilterLabel>
         </LegendContent>

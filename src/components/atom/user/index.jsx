@@ -1,4 +1,5 @@
 import styled from "styled-components"
+import { useThemeContext } from "../../../context/theme-context"
 
 const UserListWrapper = styled.div`
   width: 100%;
@@ -6,7 +7,7 @@ const UserListWrapper = styled.div`
   justify-content: space-between;
   align-items: center;
   padding: 15px 0;
-  border-bottom: 1px solid #F5F5F5;
+  border-bottom: 1px solid ${({ theme }) => theme === "light" ? "#F5F5F5" : "#201E34"};
 
   :last-child {
     border: none;
@@ -37,7 +38,7 @@ const UserField = styled.div`
 const Username = styled.p`
   font-size: 14px;
   font-weight: 600;
-  color: #1B212D;
+  color: ${({ theme }) => theme === "light" ? "#1B212D" : "#FFF"};
 `
 
 const Date = styled.p`
@@ -49,20 +50,21 @@ const Date = styled.p`
 const Price = styled.p`
   font-size: 1rem;
   font-weight: 600;
-  color: #1B212D;
+  color: ${({ theme }) => theme === "light" ? "#1B212D" : "#FFF"};
 `
 
-const UserList = ({imgProfile, name, date, price}) => {
+const UserList = ({ imgProfile, name, date, price }) => {
+  const { theme } = useThemeContext()
   return (
     <UserListWrapper>
       <UserInformation>
         <UserProfile src={imgProfile} alt="profile" />
         <UserField>
-          <Username>{name}</Username>
+          <Username theme={theme}>{name}</Username>
           <Date>{date}</Date>
         </UserField>
       </UserInformation>
-      <Price>{price}</Price>
+      <Price theme={theme}>{price}</Price>
     </UserListWrapper>
   )
 }

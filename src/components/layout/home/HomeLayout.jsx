@@ -3,6 +3,7 @@ import styled from "styled-components"
 export const HomeContainer = styled.div`
   padding: 30px 40px;
   width: 100%;
+  overflow-x: hidden;
 `
 
 export const HomeTitleField = styled.div`

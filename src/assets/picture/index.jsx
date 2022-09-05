@@ -1,11 +1,22 @@
 import main from './main.png'
 import profile from './profile.jpg'
 import creditLight from './credit-light.png'
+import creditLight2 from './credit-light2.png'
 import creditDark from './credit-dark.png'
+import creditDark2 from './credit-dark2.png'
 import boy1 from './boy-1.jpg'
 import boy2 from './boy-2.jpg'
 import girl1 from './girl-1.jpg'
 import girl2 from './girl-2.jpg'
 import girl3 from './girl-3.jpg'
 
-export { main, profile, creditLight, creditDark, boy1, boy2, girl1, girl2, girl3 }
+import phone from './phone.png'
+import netflix from './netflix.png'
+import figma from './figma.png'
+import bitcoin from './bitcoin.png'
+import person from './person.png'
+import instagram from './instagram.png'
+import uihut from './uihut.png'
+import citi from './citi.png'
+
+export { main, profile, creditLight, creditLight2, creditDark, creditDark2, boy1, boy2, girl1, girl2, girl3, phone, netflix, figma, bitcoin, person, instagram, uihut, citi }

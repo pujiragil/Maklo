@@ -25,11 +25,22 @@
 } */
 
 .chart--wrapper {
-  margin-right: 40px;
-  padding: 25px;
+  margin: 0 40px 30px 0;
+  padding: 25px 25px 0 25px;
   display: flex;
   row-gap: 0;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+.light {
+  border-radius: 10px;
+  border: 1px solid #F5F5F5;
+}
+
+.dark {
+  border-radius: 10px;
+  border: 1px solid #282541;
+  background: #1C1A2E;
 }

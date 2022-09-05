@@ -3,7 +3,7 @@ import styled from "styled-components"
 export const MainTitle = styled.h1`
   font-size: 25px;
   font-weight: 600;
-  color: #1B212D;
+  color: ${({ theme }) => theme === "light" ? "#1B212D" : "#FFF"};
   flex: 3;
 `
 

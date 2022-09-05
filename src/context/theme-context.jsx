@@ -6,8 +6,8 @@ const ThemeProvider = ({ children }) => {
   const [theme, setTheme] = useState('light')
 
   const handleTheme = () => {
-    if(theme === "dark") return document.body.classList.add('dark')
-    return document.body.classList.remove('dark')
+    if(theme === "dark") return document.body.classList.add('dark-theme')
+    return document.body.classList.remove('dark-theme')
   }
 
   useEffect(() => {

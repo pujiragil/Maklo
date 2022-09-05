@@ -1,8 +1,8 @@
-import { Router } from "./config"
+import { Routers } from "./config"
 
 const App = () => {
   return (
-    <Router/>
+    <Routers/>
   )
 }
 

@@ -7,9 +7,13 @@ const AmountItem = styled.div`
   align-items: center;
   column-gap: 15px;
   padding: 24px 20px;
-  background: ${({ primary }) => primary ? '#363A3F' : '#F8F8F8'};
+  background: ${({ theme }) => theme === "light" ? "#F8F8F8" : "#201D34"};
   border-radius: 10px;
   width: 100%;
+
+  &.primary {
+    background: ${({ theme }) => theme === "light" ? "#363A3F" : "#282541"};
+  }
 `
 
 const AmountIconWrapper = styled.div`
@@ -18,14 +22,22 @@ const AmountIconWrapper = styled.div`
   align-items: center;
   width: 42px;
   height: 42px;
-  background: ${({ primary }) => primary ? '#4E5257' : '#EBE8E8'};
+  background: ${({ theme }) => theme === "light" ? '#EBE8E8' : '#292642'};
   border-radius: 100%;
+
+  &.primary {
+    background: ${({ theme }) => theme === "light" ? "#4E5257" : "#353255"}
+  }
 `
 
 const AmountIcon = styled(RiWallet3Fill)`
-  color: ${({ primary }) => primary ? '#C8EE44' : '#363A3F'};
-  width: 14px;
-  height: 14px;
+  color: ${({ theme }) => theme === "light" ? '#363A3F' : '#FFF'};
+  width: 18px;
+  height: 18px;
+
+  &.primary {
+    color: #C8EE44;
+  }
 `
 
 const AmountField = styled.div`
@@ -43,27 +55,31 @@ const AmountTitle = styled.p`
 `
 
 const AmountTotal = styled.p`
-  color: ${({ primary }) => primary ? '#FFF' : '#1B212D'};
+  color: ${({ theme }) => theme === "light" ? "#1B212D" : "#FFF"};
   font-size: 24px;
   font-weight: 700;
+
+  &.primary {
+    color: #FFF;
+  }
 `
 const AmountWrapper = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
   column-gap: 25px;
-  margin-right: 40px;
+  margin: 0 40px 30px 0;
 `
 
-const Amount = ({ primary, title, total }) => {
+const Amount = ({ primary, theme, title, total }) => {
   return (
-    <AmountItem primary={primary}>
-      <AmountIconWrapper primary={primary}>
-        <AmountIcon primary={primary}/>
+    <AmountItem className={primary} theme={theme}>
+      <AmountIconWrapper className={primary} theme={theme}>
+        <AmountIcon className={primary} theme={theme}/>
       </AmountIconWrapper>
       <AmountField>
         <AmountTitle>{title}</AmountTitle>
-        <AmountTotal primary={primary}>{total}</AmountTotal>
+        <AmountTotal className={primary} theme={theme}>{total}</AmountTotal>
       </AmountField>
     </AmountItem>
   )

@@ -4,7 +4,8 @@ import { BsThreeDots } from "react-icons/bs"
 export const WalletWrapper = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  height: 100%;
+  justify-content: space-between;
   align-items: center;
 `
 
@@ -31,7 +32,7 @@ export const WalletTitleContent = styled.div`
 export const WalletTitle = styled.h1`
   font-size: 18px;
   font-weight: 600;
-  color: #1B212D;
+  color: ${({ theme }) => theme === "light" ? "#1B212D" : "#FFF"};
 `
 
 export const WalletSubTitle = styled.p`
@@ -67,9 +68,11 @@ export const WalletCreditContent = styled.div`
 
 export const WalletCredit = styled.img`
   width: 100%;
+  height: 210px;
 
   :last-child {
     width: 90%;
-    margin-top: -45px;
+    height: 190px;
+    margin-top: -65px;
   }
 `

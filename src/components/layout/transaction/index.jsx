@@ -1,29 +1,49 @@
 import { RiArrowRightSLine } from "react-icons/ri"
-import { tableHeader } from "../../../data/table-data"
+import { useThemeContext } from "../../../context/theme-context"
+import { tableData, tableHeader } from "../../../data/table-data"
 import { TransactionContainer, TransactionLink, TransactionRecent, TransactionRecentWrapper } from "./TransactionLayout"
-import { TableHead, TableRow, TransactionTable } from "./TransactionTable"
+import { TableDatas, TableHead, TableRow, TransactionTable } from "./TransactionTable"
 
-const TransactionLayout = ({recent}) => {
+const TransactionLayout = ({ recent }) => {
+  const { theme } = useThemeContext()
   return (
-    <TransactionContainer>
+    <TransactionContainer theme={theme}>
       {recent ? (
         <TransactionRecentWrapper>
-          <TransactionRecent>Recent Transaction</TransactionRecent>
-          <TransactionLink to="/transactions">View All <RiArrowRightSLine/></TransactionLink>
+          <TransactionRecent theme={theme}>Recent Transaction</TransactionRecent>
+          <TransactionLink to="/transactions">View All <RiArrowRightSLine /></TransactionLink>
         </TransactionRecentWrapper>
       ) : null}
       <TransactionTable>
-        <TableRow>
+        <thead>
+          <TableRow>
+            {recent ? (
+              tableHeader.slice(0, 4).map((header, index) => (
+                <TableHead key={index} position="center">{header}</TableHead>
+              ))
+            ) : (
+              tableHeader.map((header, index) => (
+                <TableHead key={index} position="left">{header}</TableHead>
+              ))
+            )}
+          </TableRow>
+        </thead>
+        <tbody>
           {recent ? (
-            tableHeader.slice(0, 4).map(header => (
-              <TableHead>{header}</TableHead>
+            tableData.slice(0, 3).map((data, index) => (
+              <TableRow key={index} >
+                <TableDatas key={data.id} {...data} />
+              </TableRow>
             ))
           ) : (
-            tableHeader.map(header => (
-              <TableHead>{header}</TableHead>
+            tableData.map((data, index) => (
+              <TableRow key={index} >
+                <TableDatas key={data.id} {...data} />
+              </TableRow>
             ))
-          )}
-        </TableRow>
+          )
+          }
+        </tbody>
       </TransactionTable>
     </TransactionContainer>
   )
