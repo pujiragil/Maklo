@@ -1,12 +1,14 @@
 import { Outlet } from "react-router-dom"
+import { useThemeContext } from "../../../context/theme-context"
 import { NavbarData } from "../../../data/navbar-data"
 import { Logo } from "../../atom"
 import { NavContainer, NavLink, NavLinkWrapper } from "./NavbarLayout"
 
 const Navbar = () => {
+  const { theme } = useThemeContext()
   return (
     <div className="main--container">
-      <NavContainer>
+      <NavContainer theme={theme}>
         <Logo/>
         <NavLinkWrapper>
           {NavbarData.map((Nav) => (

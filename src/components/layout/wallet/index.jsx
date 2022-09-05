@@ -16,7 +16,7 @@ const Wallet = () => {
         </WalletTitleContent>
         <WalletCreditContent>
           <WalletCredit src={theme === "light" ? creditDark : creditDark2} alt="credit" />
-          <WalletCredit src={creditLight} alt="credit" />
+          <WalletCredit src={theme === "light" ? creditLight : creditLight2} alt="credit" />
         </WalletCreditContent>
       </WalletContent>
       <WalletContent>

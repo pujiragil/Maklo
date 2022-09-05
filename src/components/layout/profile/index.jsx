@@ -53,7 +53,7 @@ const DarkIcon = styled(MdOutlineBrightness4)`
 
 const LightIcon = styled(MdOutlineBrightness5)`
   color: #FFF;
-  background: #C8EE44;
+  background: #929EAE;
   border-radius: 100%;
   width: 20px;
   transition: all 0.3s ease-in;

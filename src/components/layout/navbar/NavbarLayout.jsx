@@ -2,7 +2,7 @@ import styled from "styled-components"
 import { NavLink as NLink } from 'react-router-dom'
 
 export const NavContainer = styled.nav`
-  background: #FFF;
+  background: ${({ theme }) => theme === "light" ? "#FAFAFA" : "#1E1C30"};
   width: 250px;
   padding: 30px 25px;
   display: flex;

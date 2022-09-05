@@ -7,7 +7,7 @@ const UserListWrapper = styled.div`
   justify-content: space-between;
   align-items: center;
   padding: 15px 0;
-  border-bottom: 1px solid ${({ theme }) => theme === "light" ? "#F5F5F5" : "#201E34"};
+  border-bottom: 1px solid ${({ theme }) => theme === "light" ? "#FAFAFA" : "#201E34"};
 
   :last-child {
     border: none;
@@ -56,7 +56,7 @@ const Price = styled.p`
 const UserList = ({ imgProfile, name, date, price }) => {
   const { theme } = useThemeContext()
   return (
-    <UserListWrapper>
+    <UserListWrapper theme={theme}>
       <UserInformation>
         <UserProfile src={imgProfile} alt="profile" />
         <UserField>
