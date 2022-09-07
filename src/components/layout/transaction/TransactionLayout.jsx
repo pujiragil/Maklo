@@ -4,13 +4,21 @@ import styled from "styled-components"
 export const TransactionContainer = styled.div`
   padding: 25px 25px 0 25px;
   border-radius: 10px;
-  border: 1px solid ${({ theme }) => theme === "light" ? "#F5F5F5" : "#282541"};
-  margin-right: 40px;
+  border: ${props => props.primary === "true" ? "none" : `1px solid ${ props.theme === "light" ? "#F5F5F5" : "#282541"}` };
+  margin: ${props => props.margin ? props.margin : "0 40px 0 0"};
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  justify-content: flex-start;
+  align-items: flex-start;
   row-gap: 20px;
+  width: ${props => props.width};
+`
+
+export const TrasactionTitleField = styled.div`
+  display: grid;
+  width: 100%;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: 1fr;
 `
 
 export const TransactionRecentWrapper = styled.div`

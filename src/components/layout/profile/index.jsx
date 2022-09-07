@@ -17,28 +17,18 @@ const ProfileSearchIcon = styled(RiSearchLine)`
   width: 20px;
   height: 20px;
   cursor: pointer;
-  transition: all 0.2s ease-in-out;
-
-  :hover {
-    color: #1B212D;
-  }
 `
 
 const ProfileDropDownIcon = styled(IoMdArrowDropdown)`
   width: 20px;
   height: 20px;
-  color: #1B212D;
+  color: ${({ theme }) => theme === "light" ? "#1B212D" : "#FFF"};
 `
 
 const ProfileNotificationIcon = styled(BsBellFill)`
   width: 20px;
   height: 20px;
   cursor: pointer;
-  transition: all 0.2s ease-in-out;
-
-  :hover {
-    color: #1B212D;
-  }
 `
 
 const DarkIcon = styled(MdOutlineBrightness4)`
@@ -78,7 +68,9 @@ const ProfileField = styled.div`
   column-gap: 8px;
   justify-content: center;
   align-items: center;
-  /* padding: 0 10px; */
+  padding: 6px 8px;
+  border-radius: 100px;
+  background: ${({ theme }) => theme === "light" ? "#FAFAFA" : "#201D34"};
 `
 
 const ProfileItem = styled.div`
@@ -111,12 +103,12 @@ const Profile = () => {
       <ToggleTheme theme={theme} onClick={() => setTheme(theme === "light" ? "dark" : "light")}>
         {theme === "light" ? <LightIcon/> : <DarkIcon/>}
       </ToggleTheme>
-      <ProfileField>
+      <ProfileField theme={theme}>
         <ProfileItem>
           <ProfilePic src={profile} alt="profile"/>
           <ProfileName theme={theme} >Puji Ragil</ProfileName>
         </ProfileItem>
-        <ProfileDropDownIcon/>
+        <ProfileDropDownIcon theme={theme}/>
       </ProfileField>
     </ProfileWrapper>
   )
