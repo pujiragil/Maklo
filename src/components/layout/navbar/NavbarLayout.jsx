@@ -37,7 +37,7 @@ export const NavLink = styled(NLink)`
   }
 
   &:hover {
-    color: #1B212D;
+    color: ${({ theme }) => theme === "light" ? "#1B212D" : "#F5F5F5"};
   }
 `
 

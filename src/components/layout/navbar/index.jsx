@@ -12,7 +12,7 @@ const Navbar = () => {
         <Logo/>
         <NavLinkWrapper>
           {NavbarData.map((Nav) => (
-            <NavLink className={({ isActive }) => isActive ? 'active' : null} key={Nav.id} to={Nav.to}>
+            <NavLink theme={theme} className={({ isActive }) => isActive ? 'active' : null} key={Nav.id} to={Nav.to}>
               <Nav.Logo className="nav--logo"/>
               {Nav.link}
             </NavLink>
